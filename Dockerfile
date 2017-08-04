@@ -7,4 +7,4 @@ RUN apk -v --update add \
     rm /var/cache/apk/*
 
 VOLUME [ "~/.aws" ]
-ENTRYPOINT [ "aws" ]
+ENTRYPOINT [ "/bin/ash" ]
