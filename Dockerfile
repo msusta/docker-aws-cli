@@ -1,7 +1,7 @@
 FROM alpine
 
-RUN apk -v --update add py-pip && \
-    pip install --upgrade awscli && \
+RUN apk -v --no-cache add py2-pip && \
+    pip --no-cache-dir install --upgrade awscli && \
     rm /var/cache/apk/*
 
 VOLUME [ "~/.aws" ]
